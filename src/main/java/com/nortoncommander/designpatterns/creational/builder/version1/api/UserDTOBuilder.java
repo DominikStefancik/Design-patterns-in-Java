@@ -1,4 +1,4 @@
-package com.nortoncommander.designpatterns.creational.builder.api;
+package com.nortoncommander.designpatterns.creational.builder.version1.api;
 
 import com.nortoncommander.designpatterns.creational.builder.domain.Address;
 

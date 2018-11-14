@@ -1,6 +1,6 @@
-package com.nortoncommander.designpatterns.creational.builder.impl.rest;
+package com.nortoncommander.designpatterns.creational.builder.version1.impl.rest;
 
-import com.nortoncommander.designpatterns.creational.builder.api.UserDTO;
+import com.nortoncommander.designpatterns.creational.builder.version1.api.UserDTO;
 
 /**
  * Represents a concrete product/object of the Builder pattern

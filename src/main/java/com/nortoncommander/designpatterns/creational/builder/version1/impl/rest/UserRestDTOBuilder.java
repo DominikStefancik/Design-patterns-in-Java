@@ -1,21 +1,23 @@
-package com.nortoncommander.designpatterns.creational.builder.impl.web;
+package com.nortoncommander.designpatterns.creational.builder.version1.impl.rest;
 
-import com.nortoncommander.designpatterns.creational.builder.api.UserDTO;
-import com.nortoncommander.designpatterns.creational.builder.api.UserDTOBuilder;
 import com.nortoncommander.designpatterns.creational.builder.domain.Address;
+import com.nortoncommander.designpatterns.creational.builder.version1.api.UserDTO;
+import com.nortoncommander.designpatterns.creational.builder.version1.api.UserDTOBuilder;
 
 import java.time.LocalDate;
-import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 /**
- * Represents a concrete builder for creating UserWebDTO objects
+ * Represents a concrete builder for creating UserRestDTO objects
  */
-public class UserWebDTOBuilder implements UserDTOBuilder {
+public class UserRestDTOBuilder implements UserDTOBuilder {
+  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
   private String firstName;
   private String lastName;
-  private String age;
+  private String birthday;
   private String address;
-  private UserWebDTO userWebDTO;
+  private UserRestDTO userRestDTO;
 
   @Override
   public UserDTOBuilder withFirstName(String firstName) {
@@ -31,8 +33,7 @@ public class UserWebDTOBuilder implements UserDTOBuilder {
 
   @Override
   public UserDTOBuilder withBirthday(LocalDate birthday) {
-    Period ageInYears = Period.between(birthday, LocalDate.now());
-    this.age = Integer.toString(ageInYears.getYears());
+    this.birthday = formatter.format(birthday);
     return this;
   }
 
@@ -40,11 +41,11 @@ public class UserWebDTOBuilder implements UserDTOBuilder {
   public UserDTOBuilder withAddress(Address address) {
     this.address = new StringBuilder()
         .append(address.getHouseNumber())
-        .append(",")
+        .append(" ")
         .append(address.getStreet())
-        .append("\n")
+        .append(", ")
         .append(address.getCity())
-        .append("\n")
+        .append(", ")
         .append(address.getState())
         .append(" ")
         .append(address.getZipCode())
@@ -54,13 +55,12 @@ public class UserWebDTOBuilder implements UserDTOBuilder {
 
   @Override
   public UserDTO build() {
-    String name = firstName + " " + lastName;
-    this.userWebDTO = new UserWebDTO(name, this.address, this.age);
-    return this.userWebDTO;
+    this.userRestDTO = new UserRestDTO(this.firstName, this.lastName, this.birthday, this.address);
+    return this.userRestDTO;
   }
 
   @Override
   public UserDTO getUserDTO() {
-    return this.userWebDTO;
+    return this.userRestDTO;
   }
 }
