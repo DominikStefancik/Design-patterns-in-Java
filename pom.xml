@@ -19,6 +19,11 @@
       <artifactId>logback-classic</artifactId>
       <version>${logback.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>11.0.1</version>
+    </dependency>
   </dependencies>
 
   <build>
