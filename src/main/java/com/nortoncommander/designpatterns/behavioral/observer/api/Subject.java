@@ -1,4 +1,4 @@
-package com.nortoncommander.designpatterns.behavioral.observer;
+package com.nortoncommander.designpatterns.behavioral.observer.api;
 
 /**
  * A subject (also called Observable) in the Observer pattern.

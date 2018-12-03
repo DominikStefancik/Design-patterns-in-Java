@@ -1,5 +1,7 @@
-package com.nortoncommander.designpatterns.behavioral.observer;
+package com.nortoncommander.designpatterns.behavioral.observer.impl;
 
+import com.nortoncommander.designpatterns.behavioral.observer.api.Observer;
+import com.nortoncommander.designpatterns.behavioral.observer.api.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

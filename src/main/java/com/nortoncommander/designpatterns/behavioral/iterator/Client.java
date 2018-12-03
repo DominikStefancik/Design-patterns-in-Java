@@ -1,5 +1,7 @@
 package com.nortoncommander.designpatterns.behavioral.iterator;
 
+import com.nortoncommander.designpatterns.behavioral.iterator.api.Iterator;
+import com.nortoncommander.designpatterns.behavioral.iterator.impl.ThemeColor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

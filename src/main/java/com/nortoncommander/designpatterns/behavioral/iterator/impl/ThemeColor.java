@@ -1,4 +1,6 @@
-package com.nortoncommander.designpatterns.behavioral.iterator;
+package com.nortoncommander.designpatterns.behavioral.iterator.impl;
+
+import com.nortoncommander.designpatterns.behavioral.iterator.api.Iterator;
 
 /**
  * This enum represents the aggregate/collection from the Iterator pattern

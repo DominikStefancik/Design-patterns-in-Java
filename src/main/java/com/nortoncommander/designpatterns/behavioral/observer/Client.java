@@ -1,5 +1,8 @@
 package com.nortoncommander.designpatterns.behavioral.observer;
 
+import com.nortoncommander.designpatterns.behavioral.observer.impl.Order;
+import com.nortoncommander.designpatterns.behavioral.observer.impl.PriceObserver;
+import com.nortoncommander.designpatterns.behavioral.observer.impl.QuantityObserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

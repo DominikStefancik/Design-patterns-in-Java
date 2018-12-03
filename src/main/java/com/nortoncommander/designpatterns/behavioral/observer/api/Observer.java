@@ -1,4 +1,4 @@
-package com.nortoncommander.designpatterns.behavioral.observer;
+package com.nortoncommander.designpatterns.behavioral.observer.api;
 
 /**
  * Represents an abstract observer
