@@ -2,6 +2,7 @@ package com.nortoncommander.designpatterns.behavioral.chainofresponsibility.impl
 
 import com.nortoncommander.designpatterns.behavioral.chainofresponsibility.api.LeaveRequestApprover;
 import com.nortoncommander.designpatterns.behavioral.chainofresponsibility.domain.LeaveRequest;
+import com.nortoncommander.designpatterns.behavioral.chainofresponsibility.domain.LeaveRequestStatus;
 
 /**
  * Represents an abstract handler which handles/processes a request in the Chain of Responsibility pattern.
@@ -14,7 +15,7 @@ public abstract class Employee implements LeaveRequestApprover {
   private String role;
   private LeaveRequestApprover nextApprover;
 
-  public Employee(String role, LeaveRequestApprover nextApprover) {
+  Employee(String role, LeaveRequestApprover nextApprover) {
     this.role = role;
     this.nextApprover = nextApprover;
   }
@@ -38,5 +39,10 @@ public abstract class Employee implements LeaveRequestApprover {
   @Override
   public String getApproverRole() {
     return role;
+  }
+
+  void approve(LeaveRequest request) {
+    request.setStatus(LeaveRequestStatus.APPROVED);
+    request.setProcessedBy(getApproverRole());
   }
 }

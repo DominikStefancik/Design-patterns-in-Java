@@ -6,5 +6,5 @@ package com.nortoncommander.designpatterns.behavioral.chainofresponsibility.doma
 public enum LeaveType {
   SICK,
   PAID_TIME_OFF,
-  LOSS_OF_PAY // type of leave for unpaid period
+  LOSS_OF_PAY // type of leave for longer unpaid period
 }

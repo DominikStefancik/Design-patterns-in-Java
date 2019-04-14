@@ -1,6 +1,7 @@
 package com.nortoncommander.designpatterns.behavioral.chainofresponsibility.domain;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 /**
  * Represents a request in the Chain of Responsibility pattern.
@@ -57,5 +58,9 @@ public class LeaveRequest {
 
   public void setStatus(LeaveRequestStatus status) {
     this.status = status;
+  }
+
+  public int getNumberOfDays() {
+    return Period.between(from, to).getDays();
   }
 }
