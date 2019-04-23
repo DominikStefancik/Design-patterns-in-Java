@@ -32,4 +32,13 @@ public class ExchangeWebService {
     // after the removal was successful, inform the user
     LOGGER.info("Removed contact {} from the contact group {}", contact, contactGroup);
   }
+
+  public void sendEmailToMailingList(String content, String contactGroup) {
+    // Do some logic with the input parameters
+
+    // then call the exchange server to send the message
+
+    // after the message was successfully sent, inform the user
+    LOGGER.info("Message with the content '{}' sent to the contact group {}", content, contactGroup);
+  }
 }
