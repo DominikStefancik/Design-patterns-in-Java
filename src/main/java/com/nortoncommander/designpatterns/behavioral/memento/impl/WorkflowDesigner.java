@@ -52,7 +52,7 @@ public class WorkflowDesigner {
   }
 
   public void printWorkflow() {
-    LOGGER.info("Workflow {}", workflow);
+    LOGGER.info(workflow.toString());
   }
 
   /**

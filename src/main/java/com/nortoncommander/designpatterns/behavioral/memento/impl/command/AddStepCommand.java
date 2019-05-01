@@ -27,6 +27,6 @@ public class AddStepCommand extends AbstractWorkflowCommand {
     this.memento = receiver.getMemento();
     receiver.addStep(this.step);
 
-    LOGGER.info("'Add' step command executed. Receiver's state: {}", receiver.getWorkflow());
+    LOGGER.info("Adding '{}' command executed. Receiver's state: {}", step, receiver.getWorkflow());
   }
 }

@@ -27,6 +27,6 @@ public class RemoveStepCommand extends AbstractWorkflowCommand {
     this.memento = receiver.getMemento();
     receiver.removeStep(this.step);
 
-    LOGGER.info("'Remove' step command executed. Receiver's state: {}", receiver.getWorkflow());
+    LOGGER.info("Removing '{}' command executed. Receiver's state: {}", step, receiver.getWorkflow());
   }
 }
