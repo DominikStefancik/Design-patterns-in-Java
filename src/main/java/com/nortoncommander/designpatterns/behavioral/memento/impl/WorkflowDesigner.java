@@ -52,7 +52,11 @@ public class WorkflowDesigner {
   }
 
   public void printWorkflow() {
-    LOGGER.info(workflow.toString());
+    if (workflow == null) {
+      LOGGER.info("There is no workflow created");
+    } else {
+      LOGGER.info(workflow.toString());
+    }
   }
 
   /**
@@ -60,6 +64,7 @@ public class WorkflowDesigner {
    * of the workflow designer object to which it belongs.
    *
    * NOTE: Only originator object can create and have access to its memento object and nobody else from outside.
+   * That's why the Memento class is often defined as an inner class.
    *
    */
   public class Memento {

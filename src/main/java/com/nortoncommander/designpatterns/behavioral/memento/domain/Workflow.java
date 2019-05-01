@@ -49,12 +49,14 @@ public class Workflow {
     StringBuilder builder = new StringBuilder("Workflow [name=");
     builder.append(name);
     builder.append("]\n");
-    builder.append("Begin -> ");
+    builder.append("BEGIN -> ");
 
     for (String step : this.steps) {
       builder.append(step);
       builder.append(" -> ");
     }
+
+    builder.append("END");
 
     return builder.toString();
   }
