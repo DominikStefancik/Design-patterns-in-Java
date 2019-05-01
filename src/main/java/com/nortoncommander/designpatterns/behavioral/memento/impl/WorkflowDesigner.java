@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Represents an originator in the Memento design pattern. It will take "snapshots" of the workflow designer state.
+ * Represents an originator (receiver) in the Memento design pattern. It will take "snapshots" of the workflow designer state.
  * It uses Memento object to represent a particular state.
  *
  * In our example, this class represents a workflow designer in a hypothetical workflow designer application which
@@ -51,7 +51,7 @@ public class WorkflowDesigner {
     this.workflow.removeStep(step);
   }
 
-  public void logWorkflow() {
+  public void printWorkflow() {
     LOGGER.info("Workflow {}", workflow);
   }
 
