@@ -65,6 +65,9 @@ public class WorkflowDesigner {
    *
    * NOTE: Only originator object can create and have access to its memento object and nobody else from outside.
    * That's why the Memento class is often defined as an inner class.
+   * Another way to implement the memento is to define it as an interface and then making inner implementation class
+   * private. Memento object would be then exposed as an interface and caretaker would have no info about what class
+   * represents the memento object.
    *
    */
   public class Memento {
